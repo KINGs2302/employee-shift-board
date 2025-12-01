@@ -70,7 +70,7 @@ src/
 Create `.env.local` in the root directory:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:4000
+NEXT_PUBLIC_API_URL=Your Backend Url
 ```
 
 ### Step 5: Copy All Code Files
@@ -126,7 +126,7 @@ In the frontend directory:
 npm run dev
 ```
 
-The application will be available at `http://localhost:3000`
+The application will be available at `https://employee-shift-board-qa9p.vercel.app/`
 
 ## 👤 Demo Credentials
 

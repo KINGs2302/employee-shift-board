@@ -8,7 +8,16 @@ const shiftRoutes = require('./routes/shifts');
 const { errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
-app.use(cors());
+const FRONTEND_ORIGIN = 'https://employee-shift-board-qa9p.vercel.app';
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (origin === FRONTEND_ORIGIN) {
+      return callback(null, true);
+    }
+    return callback(new Error('CORS policy: This origin is not allowed'), false);
+  }
+}));
 app.use(express.json());
 
 connectDB();
